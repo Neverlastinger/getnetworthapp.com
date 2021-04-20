@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import styled from 'styled-components';
 import cn from 'classnames';
 
 const DEFAULT_INTERVAL = 7200;
@@ -40,25 +39,16 @@ export default function ImageRotator({ interval = DEFAULT_INTERVAL, slideCount, 
 
   return (
     <>
-      <FadingImage
+      <img
         className={cn({ hidden: slideState.hidden === 0 })}
         src={getImagePath(slideState.first)}
         alt="Net Worth Performance app functionalities"
       />
-      <FadingImage
+      <img
         className={cn({ hidden: slideState.hidden === 1 })}
-        src={getImagePath(slideState.second)}
+        src={getImagePath(slideState.second !== null ? slideState.second : 1)}
         alt="Net Worth Performance app functionalities"
       />
     </>
   );
 }
-
-const FadingImage = styled.img`
-  opacity: 1;
-  transition: opacity 2s;
-
-  &.hidden {
-    opacity: 0;
-  }
-`;

@@ -23,6 +23,7 @@
       flex-direction: column;
       justify-content: center;
       padding-bottom: 200px;
+      padding-left: 0px;
 
       .logo {
         margin-bottom: 36px;
@@ -54,6 +55,7 @@
     &.phone {
       flex: 1;
       background: transparent url(/shadow.png) repeat-y top left;
+      transform-origin: center top;
 
       @media (max-width: 1140px) {
         width: 610px;
@@ -63,6 +65,18 @@
       @media (max-width: 636px) {
         width: 490px;
         background: none;
+      }
+
+      @media (max-width: 512px) {
+        transform: scale(0.8);
+      }
+
+      @media (max-width: 416px) {
+        transform: scale(0.6);
+      }
+
+      @media (max-width: 312px) {
+        transform: scale(0.5);
       }
 
       &:before {
@@ -198,6 +212,12 @@
           left: 0px;
           width: 377px;
           height: 817px;
+          opacity: 1;
+          transition: opacity 2s;
+
+          &.hidden {
+            opacity: 0;
+          }
         }
       }
     }

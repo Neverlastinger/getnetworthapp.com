@@ -12,8 +12,8 @@ export default function NetWorthPage() {
         <p>
           An asset is anything owned by a person, company, or even a country, that has monetary value.
           People usually own assets different than money with the idea that their value will increase over time,
-          thus thier <Link href="/net-worth">net worth</Link> will increase too. Not every asset however increases over time.
-          A car, for instance, decreases in value when used over time. A car is also a liability in the sense that it requires
+          thus thier <Link href="/net-worth">net worth</Link> will increase too. Not every asset, however, increases its value over time.
+          A car, for instance, decreases as the time passes. A car is also a liability in the sense that it requires
           a lot of monetary resources (e.g. fuel, insurances, maintenance), so it decreases its owner's net worth.
         </p>
         <p>

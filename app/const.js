@@ -1,5 +1,5 @@
 export const PRODUCT_DESCRIPTION_P1 = `
-  Net Worth Performance app for android & iOS helps you calculate and track your net worth over time.
+  Net Worth Performance app for Android & iOS helps you calculate and track your net worth over time.
 `;
 
 export const PRODUCT_DESCRIPTION_P2 = `

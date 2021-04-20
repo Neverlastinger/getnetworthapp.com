@@ -56,6 +56,12 @@ export default function Home() {
           <li>
             <Link href="/faq">How do I use Net Worth Performance?</Link>
           </li>
+          <li>
+            <a href="">Android app</a>
+          </li>
+          <li>
+            <a href="">iOS app</a>
+          </li>
         </ul>
       </footer>
     </>

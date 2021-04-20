@@ -25,7 +25,7 @@ export default function Home() {
           <div className="android-app">
             <img className="phone-image" src="/PNGIX.com_android-png_1815605.png" alt="Net Worth Performance app functionalities" />
             <div className="screenshot">
-              <img src="/app/0a.png" alt="Net Worth Performance app functionalities" />
+              <img src="/app/1a.png" alt="Net Worth Performance app functionalities" />
             </div>
           </div>
 

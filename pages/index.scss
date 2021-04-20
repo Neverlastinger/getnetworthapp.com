@@ -28,6 +28,10 @@
       .logo {
         margin-bottom: 36px;
         width: 100%;
+
+        @media (max-width: 636px) {
+          margin-bottom: 12px;
+        }
       }
 
       .description {
@@ -43,12 +47,14 @@
       }
 
       @media (max-width: 1140px) {
+        flex-basis: 0px;
         padding: 0px;
+        padding-top: 48px;
         max-width: 420px;
       }
 
       @media (max-width: 636px) {
-        padding: 0px 24px;
+        padding: 48px 24px 0 24px;
       }
     }
 
@@ -152,8 +158,8 @@
         z-index: 4;
 
         img {
-          width: 402.5px;
-          height: 716px;
+          width: 402px;
+          height: 715px;
         }
       }
     }
@@ -161,13 +167,13 @@
     .ios-app {
       position: absolute;
       top: 58px;
-      left: 248px;
+      left: 208px;
       width: 434px;
       height: 863px;
       z-index: 3;
 
       @media (max-width: 1140px) {
-        left: 180px;
+        left: 140px;
       }
 
       @media (max-width: 636px) {

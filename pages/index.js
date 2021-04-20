@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styled from 'styled-components';
 import { PRODUCT_DESCRIPTION_P1, PRODUCT_DESCRIPTION_P2 } from 'app/const';
+import ImageRotator from 'components/ImageRotator';
 
 export default function Home() {
   return (
@@ -31,7 +32,10 @@ export default function Home() {
           <IOSApp>
             <img className="phone-image" src="/transparent-iphone-11-pro-silver.png" alt="Net Worth Performance app functionalities" />
             <div className="screenshot">
-              <img src="/app/0.png" alt="Net Worth Performance app functionalities" />
+              <ImageRotator
+                slideCount={6}
+                getImagePath={(index) => `/app/${index}.png`}
+              />
             </div>
           </IOSApp>
         </div>
@@ -110,7 +114,7 @@ const AndroidApp = styled.div`
   top: 58px;
   left: 68px;
   width: 476px;
-  height: 817px;
+  height: 832px;
   z-index: 2;
 
   &:after {
@@ -131,21 +135,22 @@ const AndroidApp = styled.div`
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 434px;
+    width: 442px;
     z-index: 3;
   }
 
   .screenshot {
     position: absolute;
-    top: 66px;
-    left: 24px;
+    top: 68px;
+    left: 25px;
     width: 400px;
-    height: 710px;
+    height: 708px;
     overflow: hidden;
+    z-index: 4;
 
     img {
-      width: 462px;
-      height: 821px;
+      width: 402.5px;
+      height: 716px;
     }
   }
 `;
@@ -153,7 +158,7 @@ const AndroidApp = styled.div`
 const IOSApp = styled.div`
   position: absolute;
   top: 58px;
-  left: 228px;
+  left: 248px;
   width: 434px;
   height: 863px;
   z-index: 3;
@@ -187,13 +192,14 @@ const IOSApp = styled.div`
     width: 374px;
     height: 811px;
     overflow: hidden;
-    _z-index: 9;
-    border: 0px solid red;
+    background: white;
 
     img {
-      margin-top: -5px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
       width: 377px;
-      height: 821px;
+      height: 817px;
     }
   }
 `;

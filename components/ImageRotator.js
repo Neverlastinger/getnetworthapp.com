@@ -6,11 +6,13 @@ const DEFAULT_INTERVAL = 7200;
 /**
  * Smoothly rotates different images with opacity transition.
  */
-export default function ImageRotator({ interval = DEFAULT_INTERVAL, slideCount, getImagePath }) {
+export default function ImageRotator({ interval = DEFAULT_INTERVAL, slideCount, getImagePath, alt }) {
   const [slideState, setSlideState] = useState({
     hidden: 1,
     first: 0,
-    second: null
+    second: null,
+    renderFirst: true,
+    renderSecond: false
   });
 
   useEffect(() => {
@@ -20,14 +22,18 @@ export default function ImageRotator({ interval = DEFAULT_INTERVAL, slideCount, 
           return {
             ...state,
             hidden: 0,
-            second: state.second ? (state.second + 2) % slideCount : 1
+            second: state.second ? (state.second + 2) % slideCount : 1,
+            renderFirst: true,
+            renderSecond: true
           };
         }
 
         return {
           ...state,
           hidden: 1,
-          first: (state.first + 2) % slideCount
+          first: (state.first + 2) % slideCount,
+          renderFirst: true,
+          renderSecond: true
         };
       });
     }, interval);
@@ -37,17 +43,26 @@ export default function ImageRotator({ interval = DEFAULT_INTERVAL, slideCount, 
     };
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setSlideState((state) => ({
+        ...state,
+        [slideState.hidden === 1 ? 'renderSecond' : 'renderFirst']: false
+      }));
+    }, interval / 2);
+  }, [slideState.hidden]);
+
   return (
     <>
       <img
         className={cn({ hidden: slideState.hidden === 0 })}
-        src={getImagePath(slideState.first)}
-        alt="Net Worth Performance app functionalities"
+        src={slideState.renderFirst ? getImagePath(slideState.first) : undefined}
+        alt={alt}
       />
       <img
         className={cn({ hidden: slideState.hidden === 1 })}
-        src={getImagePath(slideState.second !== null ? slideState.second : 1)}
-        alt="Net Worth Performance app functionalities"
+        src={slideState.renderSecond ? getImagePath(slideState.second) : undefined}
+        alt={alt}
       />
     </>
   );

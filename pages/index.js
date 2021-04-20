@@ -35,6 +35,7 @@ export default function Home() {
               <ImageRotator
                 slideCount={6}
                 getImagePath={(index) => `/app/${index}.png`}
+                alt="Net Worth Performance app functionalities"
               />
             </div>
           </div>

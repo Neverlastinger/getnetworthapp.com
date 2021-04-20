@@ -1,0 +1,83 @@
+.textPage {
+  padding: 30px 24px;
+  max-width: 780px;
+  margin: 0 auto;
+
+  a {
+    text-decoration: none;
+    color: #eb008d;
+    font-weight: 500;
+
+    &:hover {
+      color: #0070ea;
+    }
+  }
+
+  .back {
+    margin-top: 60px;
+    display: block;
+    text-align: center;
+  }
+
+  ul {
+    padding-left: 36px;
+
+    li {
+      list-style-type: disc;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 636px) {
+    flex-direction: column;
+  }
+
+  .desktopLogo {
+    margin-right: 12px;
+    height: 43px;
+
+    @media (max-width: 636px) {
+      display: none;
+    }
+  }
+
+  .mobileLogo {
+    display: none;
+
+    @media (max-width: 636px) {
+      display: block;
+      margin-bottom: 36px;
+      height: 47px;
+    }
+  }
+
+  h1 {
+    color: #0070ea;
+    font-size: 36px;
+    text-align: center;
+
+    @media (max-width: 636px) {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.content {
+  margin-top: 60px;
+  color: #444;
+  font-size: 15px;
+  line-height: 30px;
+
+  @media (max-width: 636px) {
+    margin-top: 12px;
+  }
+
+  p {
+    margin-bottom: 36px;
+  }
+}

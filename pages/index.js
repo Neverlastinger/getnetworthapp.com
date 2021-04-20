@@ -1,17 +1,12 @@
-import Head from 'next/head';
+import Link from 'next/link';
 import { PRODUCT_DESCRIPTION_P1, PRODUCT_DESCRIPTION_P2 } from 'app/const';
 import ImageRotator from 'components/ImageRotator';
+import HTMLHead from 'components/HTMLHead';
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
-        <title>Net Worth Performance</title>
-        <link rel="icon" href="/favicon.svg" />
-      </Head>
+      <HTMLHead title="Net Worth Performance" />
 
       <main className="main-wrapper">
         <div className="box content">
@@ -49,6 +44,20 @@ export default function Home() {
           </div>
         </div>
       </main>
+
+      <footer className="main-footer">
+        <ul>
+          <li>
+            <Link href="/net-worth">What is net worth?</Link>
+          </li>
+          <li>
+            <Link href="/asset">What is asset?</Link>
+          </li>
+          <li>
+            <Link href="/faq">How do I use Net Worth Performance?</Link>
+          </li>
+        </ul>
+      </footer>
     </>
   );
 }

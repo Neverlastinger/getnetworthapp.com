@@ -16,10 +16,10 @@ export default function Home() {
       <MainWrapper>
         <div className="box content">
           <Logo src="/logo-full.svg" alt="Net Worth Performance" />
-          <Description>
+          <div className="description">
             <p>{PRODUCT_DESCRIPTION_P1}</p>
             <p>{PRODUCT_DESCRIPTION_P2}</p>
-          </Description>
+          </div>
         </div>
         <div className="box phone">
           <AndroidApp>
@@ -47,11 +47,13 @@ export default function Home() {
 const MainWrapper = styled.main`
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0 auto 0 auto;
+  padding-bottom: 36px;
   width: 1080px;
 
-  @media (max-width: 970px) {
+  @media (max-width: 1140px) {
     flex-direction: column;
+    align-items: center;
     width: 100%;
   }
 
@@ -67,11 +69,42 @@ const MainWrapper = styled.main`
       flex-direction: column;
       justify-content: center;
       padding-bottom: 200px;
+
+      .description {
+        font-size: 12px;
+        line-height: 24px;
+        color: #898989;
+        font-weight: 500;
+        text-align: right;
+
+        @media (max-width: 1140px) {
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 1140px) {
+        padding: 0px;
+        max-width: 420px;
+      }
+
+      @media (max-width: 636px) {
+        padding: 0px 24px;
+      }
     }
 
     &.phone {
       flex: 1;
       background: transparent url('shadow.png') repeat-y top left;
+
+      @media (max-width: 1140px) {
+        width: 610px;
+        background: none;
+      }
+
+      @media (max-width: 636px) {
+        width: 490px;
+        background: none;
+      }
 
       &:before {
         content: '';
@@ -80,7 +113,11 @@ const MainWrapper = styled.main`
         left: 0px;
         width: 40px;
         height: 100px;
-        background: transparent url('shadow_top.png') repeat-y top left
+        background: transparent url('shadow_top.png') repeat-y top left;
+
+        @media (max-width: 1140px) {
+          background: none;
+        }
       }
 
       &:after {
@@ -91,6 +128,10 @@ const MainWrapper = styled.main`
         width: 40px;
         height: 100px;
         background: transparent url('shadow_bottom.png') repeat-y top left;
+
+        @media (max-width: 1140px) {
+          background: none;
+        }
       }
     }
   }
@@ -101,14 +142,6 @@ const Logo = styled.img`
   width: 100%;
 `;
 
-const Description = styled.div`
-  font-size: 12px;
-  line-height: 24px;
-  color: #898989;
-  font-weight: 500;
-  text-align: right;
-`;
-
 const AndroidApp = styled.div`
   position: absolute;
   top: 58px;
@@ -116,6 +149,10 @@ const AndroidApp = styled.div`
   width: 476px;
   height: 832px;
   z-index: 2;
+
+  @media (max-width: 1140px) {
+    left: 0px;
+  }
 
   &:after {
     content: "";
@@ -162,6 +199,15 @@ const IOSApp = styled.div`
   width: 434px;
   height: 863px;
   z-index: 3;
+
+  @media (max-width: 1140px) {
+    left: 180px;
+  }
+
+  @media (max-width: 636px) {
+    top: 158px;
+    left: 60px;
+  }
 
   &:after {
     content: "";

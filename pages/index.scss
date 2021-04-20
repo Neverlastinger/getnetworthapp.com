@@ -25,6 +25,17 @@
       padding-bottom: 200px;
       padding-left: 0px;
 
+      @media (max-width: 1140px) {
+        flex-basis: 0px;
+        padding: 0px;
+        padding-top: 48px;
+        max-width: 420px;
+      }
+
+      @media (max-width: 636px) {
+        padding: 48px 24px 0 24px;
+      }
+
       .logo {
         margin-bottom: 36px;
         width: 100%;
@@ -46,15 +57,33 @@
         }
       }
 
-      @media (max-width: 1140px) {
-        flex-basis: 0px;
-        padding: 0px;
-        padding-top: 48px;
-        max-width: 420px;
-      }
+      .get-the-app {
+        margin-top: 60px;
 
-      @media (max-width: 636px) {
-        padding: 48px 24px 0 24px;
+        @media (max-width: 1140px) {
+          margin-top: 12px;
+        }
+
+        .text {
+          margin-bottom: 12px;
+          color: #444;
+          font-weight: 500;
+          font-size: 14px;
+          text-align: center;
+        }
+
+        .images {
+          display: flex;
+          justify-content: center;
+
+          img {
+            height: 40px;
+
+            &:first-child {
+              margin-right: 12px;
+            }
+          }
+        }
       }
     }
 

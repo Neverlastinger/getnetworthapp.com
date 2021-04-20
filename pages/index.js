@@ -20,6 +20,14 @@ export default function Home() {
             <p>{PRODUCT_DESCRIPTION_P1}</p>
             <p>{PRODUCT_DESCRIPTION_P2}</p>
           </div>
+
+          <div className="get-the-app">
+            <div className="text">Get the app.</div>
+            <div className="images">
+              <img src="/app-store.png" alt="Go to the Apple App Store" />
+              <img src="/play-store.png" alt="Go to the Android Play Store" />
+            </div>
+          </div>
         </div>
         <div className="box phone">
           <div className="android-app">

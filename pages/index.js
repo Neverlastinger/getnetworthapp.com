@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import styled from 'styled-components';
 import { PRODUCT_DESCRIPTION_P1, PRODUCT_DESCRIPTION_P2 } from 'app/const';
 import ImageRotator from 'components/ImageRotator';
 
@@ -13,23 +12,23 @@ export default function Home() {
         <link rel="icon" href="/favicon.svg" />
       </Head>
 
-      <MainWrapper>
+      <main className="main-wrapper">
         <div className="box content">
-          <Logo src="/logo-full.svg" alt="Net Worth Performance" />
+          <img className="logo" src="/logo-full.svg" alt="Net Worth Performance" />
           <div className="description">
             <p>{PRODUCT_DESCRIPTION_P1}</p>
             <p>{PRODUCT_DESCRIPTION_P2}</p>
           </div>
         </div>
         <div className="box phone">
-          <AndroidApp>
+          <div className="android-app">
             <img className="phone-image" src="/PNGIX.com_android-png_1815605.png" alt="Net Worth Performance app functionalities" />
             <div className="screenshot">
               <img src="/app/0a.png" alt="Net Worth Performance app functionalities" />
             </div>
-          </AndroidApp>
+          </div>
 
-          <IOSApp>
+          <div className="ios-app">
             <img className="phone-image" src="/transparent-iphone-11-pro-silver.png" alt="Net Worth Performance app functionalities" />
             <div className="screenshot">
               <ImageRotator
@@ -37,219 +36,9 @@ export default function Home() {
                 getImagePath={(index) => `/app/${index}.png`}
               />
             </div>
-          </IOSApp>
+          </div>
         </div>
-      </MainWrapper>
+      </main>
     </>
   );
 }
-
-const MainWrapper = styled.main`
-  display: flex;
-  justify-content: center;
-  margin: 0 auto 0 auto;
-  padding-bottom: 36px;
-  width: 1080px;
-
-  @media (max-width: 1140px) {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .box {
-    position: relative;
-    box-sizing: border-box;
-    padding: 48px;
-    height: 922px;
-
-    &.content {
-      flex-basis: 420px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-bottom: 200px;
-
-      .description {
-        font-size: 12px;
-        line-height: 24px;
-        color: #898989;
-        font-weight: 500;
-        text-align: right;
-
-        @media (max-width: 1140px) {
-          text-align: center;
-        }
-      }
-
-      @media (max-width: 1140px) {
-        padding: 0px;
-        max-width: 420px;
-      }
-
-      @media (max-width: 636px) {
-        padding: 0px 24px;
-      }
-    }
-
-    &.phone {
-      flex: 1;
-      background: transparent url('shadow.png') repeat-y top left;
-
-      @media (max-width: 1140px) {
-        width: 610px;
-        background: none;
-      }
-
-      @media (max-width: 636px) {
-        width: 490px;
-        background: none;
-      }
-
-      &:before {
-        content: '';
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 40px;
-        height: 100px;
-        background: transparent url('shadow_top.png') repeat-y top left;
-
-        @media (max-width: 1140px) {
-          background: none;
-        }
-      }
-
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        width: 40px;
-        height: 100px;
-        background: transparent url('shadow_bottom.png') repeat-y top left;
-
-        @media (max-width: 1140px) {
-          background: none;
-        }
-      }
-    }
-  }
-`;
-
-const Logo = styled.img`
-  margin-bottom: 36px;
-  width: 100%;
-`;
-
-const AndroidApp = styled.div`
-  position: absolute;
-  top: 58px;
-  left: 68px;
-  width: 476px;
-  height: 832px;
-  z-index: 2;
-
-  @media (max-width: 1140px) {
-    left: 0px;
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 10px;
-    background: black;
-    height: 0px;
-    bottom: 0px;
-    left: 0px;
-    z-index: 1;
-    transform: scale(.78);
-    box-shadow: 0px 0px 6px 3px hsla(0, 0%, 0%, 0.25);
-  }
-
-  .phone-image {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 442px;
-    z-index: 3;
-  }
-
-  .screenshot {
-    position: absolute;
-    top: 68px;
-    left: 25px;
-    width: 400px;
-    height: 708px;
-    overflow: hidden;
-    z-index: 4;
-
-    img {
-      width: 402.5px;
-      height: 716px;
-    }
-  }
-`;
-
-const IOSApp = styled.div`
-  position: absolute;
-  top: 58px;
-  left: 248px;
-  width: 434px;
-  height: 863px;
-  z-index: 3;
-
-  @media (max-width: 1140px) {
-    left: 180px;
-  }
-
-  @media (max-width: 636px) {
-    top: 158px;
-    left: 60px;
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 10px;
-    background: black;
-    height: 0px;
-    bottom: 0px;
-    left: 0px;
-    z-index: 1;
-    transform: scale(.78);
-    box-shadow: 0px 0px 6px 2px hsla(0, 0%, 0%, 0.25);
-  }
-
-  .phone-image {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 434px;
-    z-index: 3;
-  }
-
-  .screenshot {
-    position: absolute;
-    top: 26px;
-    left: 30px;
-    width: 374px;
-    height: 811px;
-    overflow: hidden;
-    background: white;
-
-    img {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      width: 377px;
-      height: 817px;
-    }
-  }
-`;
-
-// #0070ea
-// #eb008d
-// #9A0553

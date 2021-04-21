@@ -26,6 +26,26 @@
       list-style-type: disc;
     }
   }
+
+  strong {
+    font-weight: 500;
+    background: -webkit-linear-gradient(45deg, #0070ea, #eb008d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  h2 {
+    margin-top: 90px;
+    color: #0070ea;
+    font-size: 28px;
+    text-align: center;
+    line-height: 40px;
+
+    @media (max-width: 636px) {
+      margin-top: 48px;
+    }
+  }
 }
 
 .header {
@@ -79,5 +99,70 @@
 
   p {
     margin-bottom: 36px;
+  }
+}
+
+.screenshot {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  width: 434px;
+  height: 863px;
+  transform-origin: left top;
+
+  @media (max-width: 484px) {
+    width: 347px;
+    height: 691px;
+    transform: scale(0.8);
+  }
+
+  @media (max-width: 400px) {
+    width: 260px;
+    height: 519px;
+    transform: scale(0.6);
+  }
+
+  .phoneImage {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 434px;
+    z-index: 1;
+  }
+
+  .appImage {
+    position: absolute;
+    top: 26px;
+    left: 30px;
+    width: 377px;
+  }
+}
+
+.getTheApp {
+  margin-top: 60px;
+
+  @media (max-width: 1140px) {
+    margin-top: 12px;
+  }
+
+  .text {
+    margin-bottom: 12px;
+    color: #444;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .images {
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 40px;
+
+      &:first-child {
+        margin-right: 12px;
+      }
+    }
   }
 }

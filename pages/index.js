@@ -51,10 +51,10 @@ export default function Home() {
             <Link href="/net-worth">What is net worth?</Link>
           </li>
           <li>
-            <Link href="/asset">What is asset?</Link>
+            <Link href="/asset">What is an asset?</Link>
           </li>
           <li>
-            <Link href="/faq">How do I use Net Worth Performance?</Link>
+            <Link href="/how-to-use-net-worth-performance">How do I use Net Worth Performance?</Link>
           </li>
           <li>
             <a href="">Android app</a>

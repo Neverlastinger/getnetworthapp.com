@@ -12,18 +12,6 @@ export default function NetWorthPage() {
         <p>
           The <strong>Net Worth Performance</strong> app for Android & iOS helps you calculate and track your net worth over time.
         </p>
-        <p>
-          You start by registering with an email and a password, or proceeding with your Google or Facebook account.
-          The <strong>Net Worth Performance</strong> app stores your data securely in the Google cloud, and your password can never be read by the owners of the app or even Google.
-          We never send emails.
-        </p>
-        <Screenshot img="register.png" />
-        <h2>Why registering?</h2>
-        <p>
-          <strong>Net Worth Performance</strong> is an app you can use during your entire life to track your net worth.
-          We want you to keep the data even when you change phones or laptops. That's why we store the minimum amount of data to your phone.
-          You can use different devices to access the app and all devices are automatically syncronized.
-        </p>
         <h2>How does the app access my financial data?</h2>
         <p>
           <strong>Net Worth Performance</strong> never asks you about any personal accounts or credentials.
@@ -90,6 +78,27 @@ export default function NetWorthPage() {
           This may mean that the user has spent the money, or invested in non-bank account assets.
         </p>
         <Screenshot img="category-range.png" />
+        <h2>Can I use the app on different devices?</h2>
+        <p>
+          <strong>Net Worth Performance</strong> is an app you can use during your entire life to track your net worth.
+          We want you to keep the data even when you change phones or laptops. That's why we store the minimum amount of data to your phone.
+          You can use different devices to access the app and all devices are automatically syncronized in real time.
+        </p>
+        <p>
+          Initially, after you download the app from the Apple app store or Google play store,
+          you start using it by registering with an email and a password, or proceeding with your Google or Facebook account.
+          The app stores your data securely in the Google cloud, and your password can never be read by the owners of the app or even Google.
+          We never send emails. Your email is used only as your unique identifier.
+        </p>
+        <Screenshot img="register.png" />
+        <h2>My assets' value have changed. What now?</h2>
+        <p>
+          <strong>Net Worth Performance</strong> is an app for long-term use.
+          You track your assets once per month, for example at the beginning of the month.
+          You even receive a push notification to remind you to track your assets.
+          Once you enter the new values, you will see the new outlook of your net worth.
+        </p>
+        <Screenshot img="notification.png" />
         <GetTheApp />
       </PageContent>
     </TextPage>

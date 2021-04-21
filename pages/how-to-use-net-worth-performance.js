@@ -7,7 +7,7 @@ export default function NetWorthPage() {
   return (
     <TextPage>
       <HTMLHead title="How do I use Net Worth Performance app? | Net Worth Performance" />
-      <PageHeader>How to use the app? </PageHeader>
+      <PageHeader>How to use the app</PageHeader>
       <PageContent>
         <p>
           The <strong>Net Worth Performance</strong> app for Android & iOS helps you calculate and track your net worth over time.
@@ -75,7 +75,7 @@ export default function NetWorthPage() {
           You can long-tap on the pie chart to see how a specific slice (an asset or a category of assets) performs over time.
           For instance, when long-tapping on the Bank Account category, this user sees that their bank accounts' amount has increased by $223 (3.19%) for a period of 1 year.
           However, as the bottom chart shows, the Bank Account category now takes smaller part of the overal net worth compared to an year earlier (-12.74 percentage points).
-          This may mean that the user has spent the money, or invested in non-bank account assets.
+          This may mean that the user has withdrawn their money from their bank accounts to direct it somewhere else, e.g. investing in non-bank account assets.
         </p>
         <Screenshot img="category-range.png" />
         <h2>Can I use the app on different devices?</h2>

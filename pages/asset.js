@@ -19,7 +19,7 @@ export default function NetWorthPage() {
         </p>
         <p>
           When people think about assets, first things that come to mind are the tangible assets.
-          A Tangible asset is anything that can be touched, a physical property.
+          A tangible asset is anything that can be touched, a physical property.
           An asset can also be intangible, a non-physical resource like bonds and stocks.
           A corporation can also possesses copyrights, computer programs, and patents that are considered part of their assets.
         </p>

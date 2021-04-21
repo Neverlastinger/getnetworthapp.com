@@ -28,7 +28,7 @@ export default function NetWorthPage() {
         </p>
         <p>
           From personal finance perspective, it is important to track your net worth to ensure your money is distributed into assets according to your risk tolerance.
-          Volatile assets (e.g. having stocks of an innovative tech start up) can impact your net worth in a negative or a positive way for a short period of time.
+          Volatile assets can impact your net worth in a negative or a positive way for a short period of time.
           When you have assets in different currencies, your net worth can be affected by changes of the currency rates.
         </p>
       </PageContent>

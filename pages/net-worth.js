@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/jsx-one-expression-per-line */
 import HTMLHead from 'components/HTMLHead';
 import TextPage, { PageContent, PageHeader } from 'components/TextPage';
@@ -6,7 +7,10 @@ import Link from 'next/link';
 export default function NetWorthPage() {
   return (
     <TextPage>
-      <HTMLHead title="What is net worth? | Net Worth Performance" />
+      <HTMLHead
+        title="What is net worth? | Net Worth Performance"
+        description="Net worth is the value of your assets. It is an important metric in some countries and for some institutions, like banks for example. In addition to an individual, net worth is also tracked for companies, sectors, or entire countries."
+      />
       <PageHeader>What is net worth?</PageHeader>
       <PageContent>
         <p>

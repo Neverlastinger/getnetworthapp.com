@@ -6,7 +6,10 @@ import Link from 'next/link';
 export default function NetWorthPage() {
   return (
     <TextPage>
-      <HTMLHead title="What is an asset? | Net Worth Performance" />
+      <HTMLHead
+        title="What is an asset? | Net Worth Performance"
+        description="An asset is anything owned by a person, a company, or even a country, that has monetary value. Each asset can be converted into cash (although cash is also considered an asset)."
+      />
       <PageHeader>What is an asset?</PageHeader>
       <PageContent>
         <p>

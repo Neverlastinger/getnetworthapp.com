@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/jsx-one-expression-per-line */
 import HTMLHead from 'components/HTMLHead';
 import TextPage, { PageContent, PageHeader, Screenshot, GetTheApp } from 'components/TextPage';
@@ -6,7 +7,10 @@ import Link from 'next/link';
 export default function NetWorthPage() {
   return (
     <TextPage>
-      <HTMLHead title="How do I use Net Worth Performance app? | Net Worth Performance" />
+      <HTMLHead
+        title="How do I use Net Worth Performance app? | Net Worth Performance"
+        description="You start by entering your first asset. You can name it anything you'd like, e.g. Gold if you own any gold. Then, you enter the monetary amount for the current month, chose a category and currency. There are a few predefined categories you can chose from, but you can delete, rename, and add new categories whenever you'd like."
+      />
       <PageHeader>How to use the app</PageHeader>
       <PageContent>
         <p>

@@ -8,7 +8,7 @@ export default function HTMLHead({ title, description }) {
     <Head>
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description || DEFAULT_DESCRIPTION} />
-      <meta property="og:image" content="https://getnetworthapp.com/app/0.png" />
+      <meta property="og:image" content="https://getnetworthapp.com/preview.png" />
       <meta property="og:url" content="https://getnetworthapp.com/" />
       <meta name="twitter:card" content="summary_large_image" />
 

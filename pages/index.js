@@ -1,9 +1,19 @@
+import { useRef, useState } from 'react';
 import Link from 'next/link';
+import cn from 'classnames';
 import { PRODUCT_DESCRIPTION_P1, PRODUCT_DESCRIPTION_P2 } from 'app/const';
 import ImageRotator from 'components/ImageRotator';
 import HTMLHead from 'components/HTMLHead';
 
 export default function Home() {
+  const imageRotatorRef = useRef({});
+  const [isManualRotation, setManualRotation] = useState(false);
+
+  const onPhoneClick = () => {
+    setManualRotation(true);
+    imageRotatorRef.current.nextSlide();
+  };
+
   return (
     <>
       <HTMLHead title="Net Worth Performance" />
@@ -20,7 +30,10 @@ export default function Home() {
             <div className="text">Get the app.</div>
             <div className="images">
               <img src="/app-store.png" alt="Go to the Apple App Store" />
-              <img src="/play-store.png" alt="Go to the Android Play Store" />
+              {/* eslint-disable-next-line react/jsx-no-target-blank */}
+              <a href="https://play.google.com/store/apps/details?id=com.radoslavpopov.networthperformance" target="_blank">
+                <img src="/play-store.png" alt="Go to the Android Play Store" />
+              </a>
             </div>
           </div>
         </div>
@@ -32,10 +45,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="ios-app">
+          {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events */}
+          <div className={cn('ios-app', { manual: isManualRotation })} onClick={onPhoneClick}>
             <img className="phone-image" src="/transparent-iphone-11-pro-silver.png" alt="Net Worth Performance app functionalities" />
             <div className="screenshot">
               <ImageRotator
+                ref={imageRotatorRef}
                 slideCount={6}
                 getImagePath={(index) => `/app/${index}.png`}
                 alt="Net Worth Performance app functionalities"
@@ -57,7 +72,8 @@ export default function Home() {
             <Link href="/how-to-use-net-worth-performance">How do I use Net Worth Performance?</Link>
           </li>
           <li>
-            <a href="">Android app</a>
+            {/* eslint-disable-next-line react/jsx-no-target-blank */}
+            <a href="https://play.google.com/store/apps/details?id=com.radoslavpopov.networthperformance" target="_blank">Android app</a>
           </li>
           <li>
             <a href="">iOS app</a>

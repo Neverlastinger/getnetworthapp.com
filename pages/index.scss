@@ -91,6 +91,11 @@
       flex: 1;
       background: transparent url(/shadow.png) repeat-y top left;
       transform-origin: center top;
+      user-select: none;
+
+      img {
+        pointer-events: none;
+      }
 
       @media (max-width: 1140px) {
         width: 610px;
@@ -235,6 +240,14 @@
         left: 0px;
         width: 434px;
         z-index: 3;
+      }
+
+      &.manual {
+        .screenshot {
+          img {
+            transition: opacity 0.2s;
+          }
+        }
       }
 
       .screenshot {

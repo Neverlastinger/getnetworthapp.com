@@ -46,7 +46,7 @@ export default function NetWorthPage() {
           You can configure your base currency by tapping on the Profile tab.
         </p>
         <p>
-          The following currencies are currently supported:
+          The app supports all 168 global currencies, including:
           Euro, United States dollar, Swiss franc, British pound, Bulgarian lev, Japanese yen,
           South Korean won, Hong Kong dollar, Chinese yuan, Singapore dollar, Canadian dollar,
           Australian dollar, New Zealand dollar, South African rand, Swedish krona, Norwegian krone,

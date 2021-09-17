@@ -53,9 +53,6 @@ export default function NetWorthPage() {
           Danish krone, Russian ruble, Turkish lira, Czech koruna, Romanian leu, Mexican peso,
           Indian rupee, Israeli new shekel, Philippine peso.
         </p>
-        <p>
-          We are always open to add a new currency if you need one.
-        </p>
         <Screenshot img="currency.png" />
         <h2>What about my existing data?</h2>
         <p>
